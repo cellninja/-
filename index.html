@@ -1,225 +1,193 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cell Ninja | Assistência Técnica e Acessórios</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #f4f6f9;
-            color: #333;
-            line-height: 1.6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container {
-            width: 100%;
-            max-width: 500px;
-            background: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            overflow: hidden;
-        }
-        .header-bg {
-            background: linear-gradient(135deg, #2c3e50, #1a252f);
-            padding: 30px 20px;
-            text-align: center;
-            color: white;
-        }
-        .logo-container img {
-            width: 120px;
-            height: 120px;
-            object-fit: contain;
-            border-radius: 50%;
-            border: 4px solid #fff;
-            background: #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-            margin-bottom: 15px;
-        }
-        .header-bg h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-        .header-bg p {
-            font-size: 0.95rem;
-            color: #bdc3c7;
-        }
-        .content {
-            padding: 25px 20px;
-        }
-        .badge-box {
-            display: flex;
-            justify-content: space-around;
-            background: #f8f9fa;
-            border: 1px solid #e9ecef;
-            border-radius: 12px;
-            padding: 12px;
-            margin-bottom: 25px;
-            text-align: center;
-        }
-        .badge-item h4 {
-            font-size: 0.85rem;
-            color: #27ae60;
-            margin-bottom: 2px;
-        }
-        .badge-item span {
-            font-size: 0.78rem;
-            color: #666;
-        }
-        .section-title {
-            font-size: 1.05rem;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 700;
-            border-left: 4px solid #6b1d2f;
-            padding-left: 10px;
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 12px;
-            margin-bottom: 25px;
-        }
-        .service-card {
-            background: #fff;
-            border: 1px solid #eef2f5;
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-        .service-card h3 {
-            font-size: 0.98rem;
-            color: #2c3e50;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .service-card h3 span {
-            color: #6b1d2f;
-        }
-        .service-card p {
-            font-size: 0.85rem;
-            color: #666;
-        }
-        .about-section {
-            background: #fcfcfc;
-            border-left: 3px solid #3498db;
-            padding: 15px;
-            border-radius: 0 10px 10px 0;
-            font-size: 0.88rem;
-            color: #555;
-            margin-bottom: 25px;
-        }
-        .btn-container {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 15px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: 600;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        .btn-whatsapp {
-            background-color: #25D366;
-            color: white;
-        }
-        .btn-instagram {
-            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #fd1d1d, #fd8f3f);
-            color: white;
-        }
-        footer {
-            text-align: center;
-            margin-top: 25px;
-            font-size: 0.78rem;
-            color: #888;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cell Ninja — Acessórios e Consertos Rápidos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --black:#050507;
+    --panel:#0b0c11;
+    --panel2:#12141c;
+    --cyan:#2fe3ff;
+    --cyan-dim:#0f8fa8;
+    --wine:#8c2f4a;
+    --wine-light:#c94770;
+    --ivory:#eef3f6;
+    --grey:#8a93a3;
+    --line:rgba(47,227,255,0.16);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--black);color:var(--ivory);font-family:'Rajdhani',sans-serif;font-weight:400;overflow-x:hidden;}
+  h1,h2,h3,h4{font-family:'Orbitron',sans-serif;letter-spacing:0.02em;text-transform:uppercase;}
+  .eyebrow{font-family:'Space Mono',monospace;text-transform:uppercase;letter-spacing:0.3em;font-size:0.66rem;color:var(--cyan);}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;width:100%;height:100%;object-fit:contain;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  ::selection{background:var(--cyan);color:#000;}
+
+  /* animated grid backdrop */
+  .grid-bg{
+    position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:
+      linear-gradient(rgba(47,227,255,0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(47,227,255,0.055) 1px, transparent 1px);
+    background-size:46px 46px;
+    -webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 20%, black 10%, transparent 75%);
+    mask-image:radial-gradient(ellipse 70% 60% at 50% 20%, black 10%, transparent 75%);
+  }
+
+  .neon-text{color:var(--cyan);text-shadow:0 0 10px rgba(47,227,255,0.55), 0 0 26px rgba(47,227,255,0.25);}
+
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;
+    padding:16px 40px;background:linear-gradient(to bottom, rgba(5,5,7,0.94), rgba(5,5,7,0));
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand img{width:48px;height:48px;object-fit:contain;}
+  .brand span{font-family:'Orbitron',sans-serif;font-size:1.05rem;letter-spacing:0.06em;color:var(--ivory);}
+  .brand span em{color:var(--cyan);font-style:normal;}
+  nav{display:flex;gap:30px;}
+  nav a{font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--grey);font-family:'Rajdhani',sans-serif;font-weight:600;position:relative;padding-bottom:4px;transition:color .3s;}
+  nav a:hover{color:var(--cyan);}
+  nav a::after{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--cyan);transition:width .35s ease;box-shadow:0 0 8px var(--cyan);}
+  nav a:hover::after{width:100%;}
+  .nav-wa{display:flex;align-items:center;gap:8px;border:1px solid var(--cyan);padding:9px 20px;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--cyan);font-weight:600;transition:all .3s;clip-path:polygon(10px 0,100% 0,100% calc(100% - 10px),calc(100% - 10px) 100%,0 100%,0 10px);}
+  .nav-wa:hover{background:var(--cyan);color:#000;box-shadow:0 0 20px rgba(47,227,255,0.5);}
+  .menu-toggle{display:none;background:none;border:none;color:var(--ivory);font-size:1.6rem;cursor:pointer;}
+
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:130px 0 60px;z-index:1;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr 0.95fr;gap:50px;align-items:center;position:relative;z-index:2;}
+  .hero-eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:22px;}
+  .hero-eyebrow .rule{width:36px;height:1px;background:var(--cyan);box-shadow:0 0 8px var(--cyan);}
+  .hero h1{font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:1.12;color:var(--ivory);margin-bottom:22px;}
+  .hero p{font-size:1.02rem;line-height:1.75;color:var(--grey);max-width:470px;margin-bottom:32px;font-family:'Rajdhani',sans-serif;font-weight:500;}
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;font-size:0.8rem;letter-spacing:0.1em;text-transform:uppercase;transition:all .35s ease;cursor:pointer;font-family:'Rajdhani',sans-serif;font-weight:700;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);}
+  .btn-primary{background:var(--cyan);color:#000;}
+  .btn-primary:hover{box-shadow:0 0 26px rgba(47,227,255,0.55);transform:translateY(-2px);}
+  .btn-ghost{border:1px solid rgba(238,243,246,0.28);color:var(--ivory);}
+  .btn-ghost:hover{border-color:var(--wine-light);color:var(--wine-light);}
+
+  .hero-frame{position:relative;display:flex;align-items:center;justify-content:center;}
+  .hero-ring{
+    position:relative;width:min(420px,88%);aspect-ratio:1/1;border-radius:50%;
+    background:radial-gradient(circle at 50% 50%, rgba(47,227,255,0.10), transparent 70%);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .hero-ring::before{
+    content:'';position:absolute;inset:0;border-radius:50%;border:1px solid rgba(47,227,255,0.35);
+    animation:spin 22s linear infinite;
+  }
+  .hero-ring::after{
+    content:'';position:absolute;inset:26px;border-radius:50%;border:1px dashed rgba(140,47,74,0.5);
+    animation:spin 32s linear infinite reverse;
+  }
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .hero-logo{width:66%;filter:drop-shadow(0 0 30px rgba(47,227,255,0.25));position:relative;z-index:2;}
+
+  .marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 0;overflow:hidden;white-space:nowrap;background:var(--panel);position:relative;z-index:1;}
+  .marquee-track{display:inline-block;animation:scroll 28s linear infinite;}
+  .marquee-track span{font-family:'Space Mono',monospace;font-size:0.76rem;letter-spacing:0.18em;color:var(--cyan-dim);text-transform:uppercase;margin:0 26px;}
+  @keyframes scroll{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+  section{padding:110px 0;position:relative;z-index:1;}
+  .section-head{max-width:640px;margin-bottom:56px;}
+  .section-head .eyebrow{margin-bottom:14px;}
+  .section-head h2{font-size:clamp(1.7rem,3.2vw,2.4rem);color:var(--ivory);line-height:1.25;}
+  .section-head p{color:var(--grey);margin-top:16px;line-height:1.7;font-size:1rem;font-family:'Rajdhani',sans-serif;font-weight:500;}
+
+  /* SERVICOS */
+  .servicos{background:var(--panel);}
+  .serv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .serv-card{background:var(--black);padding:44px 32px;transition:all .35s;position:relative;overflow:hidden;}
+  .serv-card:hover{background:var(--panel2);}
+  .serv-card::before{content:'';position:absolute;top:0;left:0;width:2px;height:0;background:var(--cyan);box-shadow:0 0 12px var(--cyan);transition:height .4s;}
+  .serv-card:hover::before{height:100%;}
+  .serv-icon{width:44px;height:44px;margin-bottom:24px;color:var(--cyan);}
+  .serv-icon svg{width:100%;height:100%;}
+  .serv-card h4{font-size:1.05rem;color:var(--ivory);margin-bottom:12px;letter-spacing:0.03em;}
+  .serv-card p{color:var(--grey);font-size:0.92rem;line-height:1.7;font-family:'Rajdhani',sans-serif;font-weight:500;}
+
+  /* SOBRE */
+  .sobre{background:var(--black);}
+  .sobre-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:60px;align-items:center;}
+  .sobre-visual{
+    aspect-ratio:1/1;border:1px solid var(--line);position:relative;
+    background:radial-gradient(circle at 30% 20%, rgba(47,227,255,0.08), transparent 60%);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .sobre-visual img{width:62%;filter:drop-shadow(0 0 24px rgba(140,47,74,0.35));}
+  .sobre-visual::before,.sobre-visual::after{content:'';position:absolute;width:14px;height:14px;border:1px solid var(--cyan);}
+  .sobre-visual::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+  .sobre-visual::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+  .sobre-text h3{font-size:1.5rem;color:var(--ivory);margin-bottom:18px;line-height:1.3;}
+  .sobre-text p{color:var(--grey);line-height:1.8;margin-bottom:16px;font-size:1rem;font-family:'Rajdhani',sans-serif;font-weight:500;}
+  .sobre-text p strong{color:var(--cyan);font-weight:700;}
+
+  /* COMO FUNCIONA */
+  .como{background:var(--panel);}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+  .step{background:var(--black);padding:42px 30px;}
+  .step .stepnum{font-family:'Orbitron',sans-serif;font-size:2.2rem;color:transparent;-webkit-text-stroke:1px var(--cyan);margin-bottom:18px;display:block;}
+  .step h4{font-size:1rem;color:var(--ivory);margin-bottom:10px;letter-spacing:0.03em;}
+  .step p{color:var(--grey);font-size:0.9rem;line-height:1.65;font-family:'Rajdhani',sans-serif;font-weight:500;}
+
+  /* CONTATO */
+  .contato{background:var(--black);text-align:center;padding:130px 0 100px;position:relative;}
+  .contato::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:70px;background:linear-gradient(to bottom,transparent,var(--cyan));box-shadow:0 0 10px var(--cyan);}
+  .contato h2{font-size:clamp(1.9rem,3.6vw,2.8rem);color:var(--ivory);max-width:700px;margin:0 auto 20px;line-height:1.25;}
+  .contato p{color:var(--grey);max-width:480px;margin:0 auto 40px;line-height:1.7;font-family:'Rajdhani',sans-serif;font-weight:500;}
+  .social-row{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;}
+  .social-btn{
+    display:flex;align-items:center;gap:12px;padding:17px 32px;border:1px solid var(--line);
+    font-size:0.82rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ivory);font-weight:700;
+    transition:all .35s ease;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px);
+  }
+  .social-btn svg{width:20px;height:20px;fill:var(--cyan);transition:fill .35s;}
+  .social-btn:hover{background:var(--panel2);border-color:var(--cyan);}
+  .social-btn.whats{background:var(--cyan);color:#000;border-color:var(--cyan);}
+  .social-btn.whats svg{fill:#000;}
+  .social-btn.whats:hover{box-shadow:0 0 26px rgba(47,227,255,0.5);}
+  .social-btn.insta{border-color:var(--wine-light);}
+  .social-btn.insta svg{fill:var(--wine-light);}
+  .social-btn.insta:hover{background:var(--wine-light);color:#000;}
+  .social-btn.insta:hover svg{fill:#000;}
+
+  footer{border-top:1px solid var(--line);padding:32px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;position:relative;z-index:1;}
+  footer .fbrand{display:flex;align-items:center;gap:10px;}
+  footer .fbrand img{width:30px;height:30px;object-fit:contain;}
+  footer .fbrand span{font-family:'Orbitron',sans-serif;font-size:0.85rem;color:var(--grey);}
+  footer .fnote{font-size:0.74rem;color:var(--grey);letter-spacing:0.03em;font-family:'Space Mono',monospace;}
+
+  .wa-float{
+    position:fixed;bottom:28px;right:28px;z-index:60;width:58px;height:58px;
+    background:var(--cyan);display:flex;align-items:center;justify-content:center;
+    box-shadow:0 0 24px rgba(47,227,255,0.5);transition:transform .3s;
+    clip-path:polygon(14px 0,100% 0,100% calc(100% - 14px),calc(100% - 14px) 100%,0 100%,0 14px);
+  }
+  .wa-float:hover{transform:scale(1.08);}
+  .wa-float svg{width:26px;height:26px;fill:#000;}
+
+  @media (max-width:900px){
+    nav{display:none;}
+    .menu-toggle{display:block;}
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-frame{order:-1;margin-bottom:10px;}
+    .serv-grid{grid-template-columns:1fr;}
+    .sobre-grid{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr;}
+  }
+</style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="header-bg">
-            <div class="logo-container">
-                <img src="logo.png" alt="Cell Ninja Logo">
-            </div>
-            <h1>Cell Ninja</h1>
-            <p>Assistência Técnica & Acessórios</p>
-        </div>
+<div class="grid-bg"></div>
 
-        <div class="content">
-            <div class="badge-box">
-                <div class="badge-item">
-                    <h4>⚡ Rápido</h4>
-                    <span>Serviços Ágeis</span>
-                </div>
-                <div class="badge-item">
-                    <h4>🛡️ 30 Dias</h4>
-                    <span>Garantia de Qualidade</span>
-                </div>
-                <div class="badge-item">
-                    <h4>🤝 Confiável</h4>
-                    <span>Transparência Total</span>
-                </div>
-            </div>
-
-            <div class="about-section">
-                <strong>Quem somos:</strong> Especialistas em soluções rápidas e eficientes para o seu smartphone. Cuidamos do seu aparelho com total segurança e profissionalismo.
-            </div>
-
-            <h2 class="section-title">O Que Fazemos</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3><span>📱</span> Troca de Telas e Displays</h3>
-                    <p>Substituição de ecrãs danificados com materiais de excelente qualidade.</p>
-                </div>
-                <div class="service-card">
-                    <h3><span>🔧</span> Manutenção e Consertos Básicos</h3>
-                    <p>Reparos essenciais para o funcionamento perfeito do seu telemóvel.</p>
-                </div>
-                <div class="service-card">
-                    <h3><span>🎧</span> Venda de Acessórios</h3>
-                    <p>Variedade de acessórios para proteger e complementar o seu dispositivo.</p>
-                </div>
-            </div>
-
-            <h2 class="section-title">Fale Conosco</h2>
-            <div class="btn-container">
-                <a href="https://wa.me/558581247263?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20orçamento." class="btn btn-whatsapp" target="_blank">
-                    💬 Chamar no WhatsApp
-                </a>
-                <a href="https://instagram.com/cell_ninjastory" class="btn btn-instagram" target="_blank">
-                    📸 Seguir no Instagram (@cell_ninjastory)
-                </a>
-            </div>
-
-            <footer>
-                &copy; 2026 Cell Ninja • Todos os direitos reservados.
-            </footer>
-        </div>
-    </div>
-
-</body>
-</html>
+<header>
+  <div class="brand">
+    <img 
